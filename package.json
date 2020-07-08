@@ -4,6 +4,7 @@
 	"description": "uni-app preset for vue-cli",
 	"main": "index.js",
 	"scripts": {
+		"run:app-plus-android": "sh initandroidapk.sh",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "fxy060608",
