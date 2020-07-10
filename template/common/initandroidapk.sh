@@ -1,15 +1,15 @@
 #!/bin/sh
 function start(){
     echo "----请输入appid：----"
-    # read appid
-    appid="__UNI__3F88888"
-    echo "----appid:$appid----"
-    destDir="./androidBase/app/src/main/assets/apps/$appid/www"
-    if [ ! -d "$destDir" ]; 
-    then
-        mkdir -p "$destDir"
-    fi
-    cp -rp ./dist/build/app-plus/. $destDir
+    # # read appid
+    # appid="__UNI__3F88888"
+    # echo "----appid:$appid----"
+    # destDir="./androidBase/app/src/main/assets/apps/$appid/www"
+    # if [ ! -d "$destDir" ]; 
+    # then
+    #     mkdir -p "$destDir"
+    # fi
+    # cp -rp ./dist/build/app-plus/. $destDir
 
     # echo "----开始编译----"
     # apk_path="./app/build/outputs/apk/debug/app-debug.apk"
@@ -32,9 +32,16 @@ function start(){
     # fi
 }
 
-function zipwgt(){
+function buidwgt(){
+    rm -rf ./dist
+    npm run build:app-plus
+
     cd ./dist/build/app-plus
-    tar -cvf __UNI__3F88888.wgt *
+
+
+    # 压缩当前目录下的所有文件到一个zip
+    zip -q -r __UNI__3F88888.wgt *
+    
     cd ../../../
 }
 
@@ -58,7 +65,12 @@ function startservice(){
     cd ../../../
 }
 
+function startwatch(){
+    node watchf.js
+    
+}
 # start
-zipwgt
+buidwgt
 installapk
+startwatch &
 startservice
