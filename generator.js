@@ -36,6 +36,7 @@ module.exports = (api, options, rootOptions) => {
     return {
       dependencies: {
         'regenerator-runtime': '^0.12.1',// 锁定版本，避免高版本在小程序中出错
+        "7zip-min": "^1.1.2",
         '@dcloudio/uni-helper-json': '*'
       },
       devDependencies: {
@@ -51,6 +52,7 @@ module.exports = (api, options, rootOptions) => {
       return {
         dependencies: {
           'vue-class-component': '^6.3.2',
+          "7zip-min": "^1.1.2",
           'vue-property-decorator': '^8.0.0'
         },
         devDependencies: {

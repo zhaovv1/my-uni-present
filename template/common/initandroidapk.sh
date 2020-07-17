@@ -1,49 +1,42 @@
 #!/bin/sh
-function start(){
-    echo "----请输入appid：----"
-    # # read appid
-    # appid="__UNI__3F88888"
-    # echo "----appid:$appid----"
-    # destDir="./androidBase/app/src/main/assets/apps/$appid/www"
-    # if [ ! -d "$destDir" ]; 
-    # then
-    #     mkdir -p "$destDir"
-    # fi
-    # cp -rp ./dist/build/app-plus/. $destDir
+function selectdevice(){
+    selectdeviceId=""
+    adb devices > devices.txt  2>&1 
+    i=0
+    exec 3<&0         # save stdin 将标准输入重定向到文件描述符3
+    exec < ./devices.txt # 输入文件
 
-    # echo "----开始编译----"
-    # apk_path="./app/build/outputs/apk/debug/app-debug.apk"
-    # cd ./androidBase
-    # # 删除老的apk
-    # rm -rf $apk_path
-    # echo "\033[37;45m*************************  打包开始🎉  🎉  🎉 *************************   \033[0m"
-    # sleep 1
-    # # 执行安卓打包脚本
-    # sh ./gradlew clean assembleDebug
-    # # 检查apk文件是否存在
-    # if [ -f "$apk_path" ]; then
-    # echo "$apk_path"
-    # echo "\033[37;45m打包成功 🎉  🎉  🎉   \033[0m"
-    # adb install $apk_path
-    # sleep 1
-    # else
-    # echo "\033[37;45m没有找到对应的apk文件 😢 😢 😢   \033[0m"
-    # exit 1
-    # fi
+    while read line; do
+        line=$(eval echo ${line})
+        if [[ $line =~ "devices" ]]
+        then
+        echo ""
+        elif [[ $line =~ "device" ]]
+        then
+            deviceName=${line%% *}
+            id=$(( ${#devicesArrTemp[@]} + 1 ))
+            echo "$id):$deviceName"
+            devicesArrTemp[${#devicesArrTemp[@]}]=$deviceName
+            devicesArrTemp[$i]=$deviceName
+            let i++
+        else
+            echo ""
+        fi
+    done
+    exec 0<&3 
+    if [[ 1 -lt ${#devicesArrTemp[@]} ]]
+    then
+        echo "选择设备："
+        read selectindex
+        selectindex=$(( $selectindex - 1 ))
+        selectdeviceId="${devicesArrTemp[$selectindex]}"
+        echo $selectdeviceId
+    else
+        echo ""
+    fi
+
 }
 
-function buidwgt(){
-    rm -rf ./dist
-    npm run build:app-plus
-
-    cd ./dist/build/app-plus
-
-
-    # 压缩当前目录下的所有文件到一个zip
-    zip -q -r __UNI__3F88888.wgt *
-    
-    cd ../../../
-}
 
 function installapk(){
     # 检查apk文件是否存在
@@ -52,25 +45,33 @@ function installapk(){
     then
         echo "$apk_path"
         echo "\033[37;45m打包成功 🎉  🎉  🎉   \033[0m"
-        adb install $apk_path
+        if [[ -n "${selectdeviceId}" ]]
+        then
+            adb -s $selectdeviceId install -r $apk_path
+        else
+            adb install -r $apk_path
+        fi
+        
+        adb shell am start com.ztesoft.fmx.myapplication/.MainActivity
     else
         echo "\033[37;45m打包失败 🎉  🎉  🎉   \033[0m"
     fi
     sleep 1
 }
 
+function buidwgt(){
+    rm -rf ./dist
+    npm run dev:app-plus
+}
+
+
 function startservice(){
-    cd ./dist/build/app-plus
+    cd ./dist/dev/app-plus
     http-server
     cd ../../../
 }
 
-function startwatch(){
-    node watchf.js
-    
-}
-# start
-buidwgt
+selectdevice
+buidwgt &
 installapk
-startwatch &
-startservice
+startservice 
