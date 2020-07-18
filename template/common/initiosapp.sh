@@ -14,7 +14,7 @@ envionmentVariables(){
     echo "APP平台资源路径uniappre_dir=${uniappre_dir}"
 
     # uniapp appID
-    uni_appid="__UNI__D20B223"
+    uni_appid="__UNI__3F88888"
 
     # # 原生宿主工程路径
     # iosapp_dir="/Users/devops/Desktop/uni_yy"
@@ -62,11 +62,11 @@ useSimulator(){
 checkiOSApp(){
     if useSimulator ; then
         echo "检测模拟器资源"
-        if [ -d "$project_dir/iPhoneSimulator/Payload" ]; 
+        if [ -d "$project_dir/iOSBase/iPhoneSimulator/Payload" ]; 
         then
             echo "\033[37;45m 模拟器Payload文件夹存在success，如果必要请手动查看是否有.app应用程序 \033[0m"
             is_iphonesimulator="true"
-            bootapp_path=${project_dir}/iPhoneSimulator/Payload/${ios_scheme}
+            bootapp_path=${project_dir}/iOSBase/iPhoneSimulator/Payload/${ios_scheme}
             echo "原生宿主.app路径bootapp_path=${bootapp_path}"
         else
             echo "\033[37;45m模拟器.app应用程序不存在failed \033[0m"
@@ -75,11 +75,11 @@ checkiOSApp(){
         sleep 1
     else
         echo "检测真机资源"
-        if [ -d "$project_dir/iPhone/Payload" ]; 
+        if [ -d "$project_dir/iOSBase/iPhone/Payload" ]; 
         then
             echo "\033[37;45m 真机Payload文件夹存在success，如果必要请手动查看是否有.app应用程序 \033[0m"
             is_iphonesimulator="false"
-            bootapp_path=${project_dir}/iPhone/Payload/${ios_scheme}
+            bootapp_path=${project_dir}/iOSBase/iPhone/Payload/${ios_scheme}
             echo "原生宿主.app路径bootapp_path=${bootapp_path}"
         else
             echo "\033[37;45m真机.app应用程序不存在failed \033[0m"
@@ -199,7 +199,7 @@ envionmentVariables
 checkiOSApp
 chooseDevice
 buildUniappResource &
-zipRenamePackage
+# zipRenamePackage
 openSimulator
-# startservice
+startservice
 # starWatch
