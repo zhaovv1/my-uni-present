@@ -42,6 +42,7 @@ module.exports = (api, options, rootOptions) => {
       devDependencies: {
         'postcss-comment': '^2.0.0',
         '@dcloudio/types': '*',
+        "@dcloudio/vue-cli-plugin-hbuilderx": "https://github.com/zhaovv1/vue-cli-plugin-hbuilderx.git",
         'miniprogram-api-typings': '*',
         'mini-types': '*'
       }
