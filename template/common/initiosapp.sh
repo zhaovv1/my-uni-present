@@ -9,20 +9,12 @@ envionmentVariables(){
     project_dir="$(pwd)"
     echo "项目根目录project_dir=${project_dir}"
 
-    # uniapp APP平台资源路径
-    uniappre_dir="${project_dir}/dist/dev/app-plus"
+    # uniapp APP平台资源压缩包路径
+    uniappre_dir="${project_dir}/dist/dev"
     echo "APP平台资源路径uniappre_dir=${uniappre_dir}"
 
     # uniapp appID
     uni_appid="__UNI__3F88888"
-
-    # # 原生宿主工程路径
-    # iosapp_dir="/Users/devops/Desktop/uni_yy"
-    # echo "原生宿主工程路径iosapp_dir=${iosapp_dir}"
-
-    # # 原生宿主存放uni资源.wgt路径
-    # uniwgt_dir="${iosapp_dir}/uni_yy/UniMP/Apps"
-    # echo "uni资源.wgt路径uniwgt_dir=${uniwgt_dir}"
 
     # 原生宿主scheme.app
     ios_scheme="uni_yy.app"
@@ -149,21 +141,6 @@ buildUniappResource(){
     npm run dev:app-plus
 }
 
-# zip压缩资源文件并更改后缀为.wgt
-zipRenamePackage(){
-    cd $uniappre_dir
-    # 压缩当前目录下的所有文件到一个zip
-    zip -q -r ${uni_appid}.zip *
-    
-    # 修改资源文件名称
-    mv ${uni_appid}.zip ${uni_appid}.wgt
-
-    # 测试 移动资源文件到宿主指定位置
-    # mv ${uniappre_dir}/${uni_appid}.wgt ${uniwgt_dir}/${uni_appid}.wgt
-
-    # 将资源包上传到服务器上
-}
-
 # 安装原生宿主项目到iOS设备
 openSimulator(){
     echo "\033[37;45m 安装到指定iOS设备... \033[0m"
@@ -189,17 +166,9 @@ startservice(){
     http-server
 }
 
-# 监测代码是否有变动
-starWatch(){
-    cd $project_dir
-    node watchf.js
-}
-
 envionmentVariables
 checkiOSApp
 chooseDevice
 buildUniappResource &
-# zipRenamePackage
 openSimulator
 startservice
-# starWatch
