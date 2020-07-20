@@ -598,7 +598,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		DDVFblOkMNiBylw+GQ5sl6L6Nd0=
+		H6f6qQz6kamHG4bm1afxTQmo6KU=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -606,35 +606,35 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		00gUW3YPuOD8xnEug442Luajpbg=
+		M07l14JPx8Daxps68qLZmuYJhlk=
 		</data>
 		<key>Base.lproj/Main.storyboardc/4W0-yF-y6m-view-DN1-ox-p1p.nib</key>
 		<data>
-		UIJ7Ock3mD5bolXPCh7zw/Bt6Ug=
+		2zdsEncnO9wn0TxWx5+0m4Fx3NU=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		yGBfsYEjKUZaNy/g52GKsWuUMUU=
+		TNsKk5GJIvxggX+kyWQFdIitZmI=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		SbCn3sP49cNGBDYTPgt8YvT7Xt0=
+		VSJeYhOQqKM9EvLQZfUhhpY5OXI=
 		</data>
 		<key>Base.lproj/Main.storyboardc/mainNavigation.nib</key>
 		<data>
-		ZzUPf5TEHUuX6qsu71QKjxQOjUw=
+		iAM/uWIQjSzLpqyNDjsMXzCFa+k=
 		</data>
 		<key>Base.lproj/Main.storyboardc/nativevc.nib</key>
 		<data>
-		LJl12IswDZTvbbP0mKakL3Hzf18=
+		91gJwnDP2ZHM6peolwb40DvKyd8=
 		</data>
 		<key>Base.lproj/Main.storyboardc/nativevc11.nib</key>
 		<data>
-		2RTP/471oyLfu/uuEnQpTg43k04=
+		px4tvzRUzxBC4bppD9+HnuiWd5E=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OEymwIpmkSEBu6RuRdPogvDo4KM=
+		b/3o1r8i9A8xeoJCntvBaPU9Jws=
 		</data>
 		<key>PandoraApi.bundle/all.js</key>
 		<data>
@@ -1046,7 +1046,7 @@
 		</data>
 		<key>SplashView.nib</key>
 		<data>
-		pqQOt1IYNMHrCrn7qJ6J2dtTuSk=
+		wk8q5j3F+M+w2CD5ApsAwD8aJJU=
 		</data>
 		<key>TZImagePickerController.bundle/MMVideoPreviewPlay@2x.png</key>
 		<data>
@@ -2807,11 +2807,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DDVFblOkMNiBylw+GQ5sl6L6Nd0=
+			H6f6qQz6kamHG4bm1afxTQmo6KU=
 			</data>
 			<key>hash2</key>
 			<data>
-			KOJmbniXvcFUQmrAGj9Zf2zQ9FLQTI6f+j9MNJIcO6s=
+			jpk+y9HhS6W775MWjseusqvUOfEDQGYon4Gtc5ZQ4po=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -2829,77 +2829,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			00gUW3YPuOD8xnEug442Luajpbg=
+			M07l14JPx8Daxps68qLZmuYJhlk=
 			</data>
 			<key>hash2</key>
 			<data>
-			wOQsPXJfFRkKCt4bhEf+Lnz6xtA+3P3JZ1uqM5qKaJ4=
+			66WMKUpsn89vRqELGPmrhZLDvkgAfyDAeI3vOj2TsZg=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/4W0-yF-y6m-view-DN1-ox-p1p.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UIJ7Ock3mD5bolXPCh7zw/Bt6Ug=
+			2zdsEncnO9wn0TxWx5+0m4Fx3NU=
 			</data>
 			<key>hash2</key>
 			<data>
-			wC51xrAgn/6+NcAPEGzsGZ1F7usqTjnXpiDOQwnsg10=
+			+csGPxn6X72YM7slOXnv54M+bnCsIsboELCcRJ2uaBw=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yGBfsYEjKUZaNy/g52GKsWuUMUU=
+			TNsKk5GJIvxggX+kyWQFdIitZmI=
 			</data>
 			<key>hash2</key>
 			<data>
-			uuw1G6c61DG6eVtQpIOwCAqAiFa3lUZVezrcKEY0HEk=
+			mpD7j8/KFEpWKBdWLnIJ5dX5wq7hFnrjGI9IcU8itOg=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SbCn3sP49cNGBDYTPgt8YvT7Xt0=
+			VSJeYhOQqKM9EvLQZfUhhpY5OXI=
 			</data>
 			<key>hash2</key>
 			<data>
-			e8uSmRc/9q+BsWt8OXnO9LFnasyhiKxqRB22cew5yBs=
+			AjBxmnj6xCwQQlQzQJxQ28ifBZ9DcyfBv/IxjXc/C4U=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/mainNavigation.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZzUPf5TEHUuX6qsu71QKjxQOjUw=
+			iAM/uWIQjSzLpqyNDjsMXzCFa+k=
 			</data>
 			<key>hash2</key>
 			<data>
-			3TUBTrJYue3tW0PPr9AuQvu47dyobaQZFq8dMM4mhBc=
+			bUf1t2yv/kfBd/9bf59yZn2SjwfN4RI9qU4vGV0kGIw=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/nativevc.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LJl12IswDZTvbbP0mKakL3Hzf18=
+			91gJwnDP2ZHM6peolwb40DvKyd8=
 			</data>
 			<key>hash2</key>
 			<data>
-			sH/tCndYHUGQ32dc0OdPMFsKtznRn8kyBCv484OC1xQ=
+			ttJT2fjU0PR/UEwwAd216C2IyoBAOczxsORNQ9RkKCs=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/nativevc11.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2RTP/471oyLfu/uuEnQpTg43k04=
+			px4tvzRUzxBC4bppD9+HnuiWd5E=
 			</data>
 			<key>hash2</key>
 			<data>
-			7sDyFe2zftIXfNIaLhi7+ZKWcxxv2W9kr0jDAcInAS4=
+			/Eo7UcEfTT3T1v/RRIdtbRy6oxlHpugLXRZeMfcIGNM=
 			</data>
 		</dict>
 		<key>PandoraApi.bundle/all.js</key>
@@ -4017,11 +4017,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pqQOt1IYNMHrCrn7qJ6J2dtTuSk=
+			wk8q5j3F+M+w2CD5ApsAwD8aJJU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yc0RHcxAMzEEuGN19D49m72yHkDLRyf2khawZhgPv3E=
+			6DDq2cVKB9w4yJc0l5pYUZPheVUaQ8XtgFYV7MSMh3A=
 			</data>
 		</dict>
 		<key>TZImagePickerController.bundle/MMVideoPreviewPlay@2x.png</key>
