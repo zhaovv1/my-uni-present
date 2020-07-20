@@ -66,9 +66,9 @@ function buidwgt(){
 
 
 function startservice(){
-    cd ./dist/dev/app-plus
+    cd ./dist/dev
     http-server
-    cd ../../../
+    cd ../../
 }
 
 selectdevice
