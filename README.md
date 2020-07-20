@@ -1,3 +1,9 @@
 # @uni-app/vue-cli-preset-uni-app
 
-> uni-app preset for vue-cli
+#####使用步骤
+
+- 创建工程：
+> vue create -p zhaovv1/my-uni-present myproject
+
+
+- 修改src中manifest.json的appid为 __UNI__3F88888
