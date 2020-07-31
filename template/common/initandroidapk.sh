@@ -60,7 +60,7 @@ function installapk(){
 }
 
 function buidwgt(){
-    rm -rf ./dist
+    rm -rf ./dist/dev/*
     npm run dev:app-plus
 }
 
